@@ -1,0 +1,6 @@
+[
+  JavaScript,
+  React,
+  Tailwind,
+  Git
+]
