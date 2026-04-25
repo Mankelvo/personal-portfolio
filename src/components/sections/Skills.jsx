@@ -15,6 +15,7 @@ function Skills(){
                                 <li key={item}>{item}</li>
                             )) }
                      </ul>
+                   
                      </li>
                     ))}
                     
