@@ -1,6 +1,6 @@
 function About(){
     return (
-        <section>
+        <section id="about">
         <h2>About Me</h2>
         <p>
           I’m a passionate Frontend Developer focused on building clean,
