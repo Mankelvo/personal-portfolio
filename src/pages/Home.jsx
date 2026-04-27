@@ -11,7 +11,6 @@ import Contact from '../components/sections/Contact';
 
 
 
-
 function Home(){
     return(
    <>
