@@ -1,7 +1,20 @@
 import Kelvin from "../../assets/images/Kelvin.jpeg";
 import Button from '../ui/Button';
 
+
 function Hero(){
+
+    const ResumeButton =({text,href,download,target, rel, ...props}) =>{
+       const className = "px-4 py-2 text-blue-600 hover:underline transition"; 
+
+         
+        if (href){
+            return (
+<a href={href} download={download} className={className} target={target} rel={rel}>{text}</a>
+            );
+        }
+        return <button className={className} {...props}>{text}</button>
+    }
     return (
         <section className="relative z-10 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 max-w-6xl mx-auto min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-10 py-12">
              <div className="absolute right-10 top-20 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
@@ -14,7 +27,8 @@ function Hero(){
      <div className="flex flex-wrap justify-center md:justify-start gap-4">
  <Button text="View Projects" variant="primary"/>
       <Button text="Contact Me" variant="secondary"/>
-       <Button text="Download Resume" variant="tertiary"/>
+      <ResumeButton  href="/Documents/Resume.pdf" text="Download Resume"  target="_blank"/>
+  
      </div>
        </div>
         <div  >

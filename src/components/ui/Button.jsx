@@ -5,6 +5,7 @@ function Button ({text,variant}){
 const secondaryBtn =
   "border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-50 transition";
   const tertiaryBtn ="text-blue-600 hover:underline";
+  
   let buttonStyle;
   if(variant=== "primary"){
     buttonStyle = primaryBtn;
