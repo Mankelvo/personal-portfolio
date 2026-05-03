@@ -34,7 +34,10 @@ function Navbar(){
             <button
             className="md:hidden text-2xl text-gray-800 hover:text-blue-600"
             onClick={()=>setIsOpen(!isOpen)}
-            aria-label="Toggle navigation menu" >
+            aria-label="Toggle navigation menu"
+                aria-expanded={isOpen}
+            >
+             
             <span className="transition-transform duration-300">
           {isOpen? <RxCross1 />
             : <GiHamburgerMenu /> 
@@ -46,7 +49,7 @@ function Navbar(){
             </div>
 
          {
-       <ul className={`flex flex-col items-center gap-8 py-4 md:hidden bg-white/90 border-t border-gray-100 transition-all duration-300 ease-in-out ${
+       <ul className={`flex flex-col items-center gap-8 py-4 md:hidden bg-white/90 border-t backdrop-blur-md z-50 shadow-md border-gray-100 transition-all duration-300 ease-in-out ${
        isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 overflow-hidden"}`}>
             
                 <li ><a  className={NavLink} href="#about" onClick={()=>setIsOpen(false)}>About</a></li>
