@@ -27,7 +27,7 @@ function Hero(){
      <div className="flex flex-wrap justify-center md:justify-start gap-4">
  <Button text="View Projects" variant="primary"/>
       <Button text="Contact Me" variant="secondary"/>
-      <ResumeButton  href="/Documents/Resume.pdf" text="Download Resume"  target="_blank"/>
+      <ResumeButton  href="/Resume.pdf" text="Download Resume"  target="_blank"/>
   
      </div>
        </div>
