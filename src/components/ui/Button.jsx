@@ -1,4 +1,4 @@
-function Button ({text,variant}){
+function Button ({text,variant, target = "_self", href}){
     const primaryBtn =
   "bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition";
 
@@ -16,6 +16,13 @@ const secondaryBtn =
   }
   else{
     buttonStyle=tertiaryBtn;
+  }
+  if(href){
+    return(
+      <a href={href} target={target} className={buttonStyle}>
+        {text}
+      </a>
+    );
   }
 
     return (
