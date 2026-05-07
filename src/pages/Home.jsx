@@ -12,7 +12,7 @@ import Contact from '../components/sections/Contact';
 
 function Home(){
     return(
-   <>
+   <div className='bg-slate-50 text-gray-800'>
     <Navbar/>
     
     <main>
@@ -25,7 +25,7 @@ function Home(){
     </main>
 
    <Footer/>
-   </>
+   </div>
     )
 }
 
