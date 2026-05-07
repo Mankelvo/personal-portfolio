@@ -1,5 +1,6 @@
-import { Hexagon } from "lucide-react";
+import { Hexagon, Terminal } from "lucide-react";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGit, FaGithub } from "react-icons/fa";
+import { IoBagSharp } from "react-icons/io5";
 import { SiTailwindcss, SiTypescript, SiJest } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
@@ -19,7 +20,7 @@ const skills = [
 
   {category: "Backend",
     items:[
-      {name:"Node.JS", icon:Hexagon}
+      {name:"Node.js", icon:Hexagon}
     ]
   },
   {
@@ -30,6 +31,7 @@ const skills = [
 
       { name: "VS Code", icon:VscVscode },
       { name: "Jest", icon: SiJest },
+
     ],
   },
 
