@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import skills from '../../data/skills.js';
 import { NavLink } from '../layout/Navbar.jsx';
+import Section from '../layout/sections.jsx';
 function Skills(){
 
   const[activeCategory, SetactiveCategory] = useState("all");
   const categories =["All", "Frontend", "Backend", "Tools"];
 
     return (
-            <section id="skills" className="scroll-mt-20 relative z-10 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100  min-h-screen  px-10 py-12">
-                     <div className="absolute right-10 top-20 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
+            <Section id="skills"  >
             
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className=" relative z-10">
             <h2 className='text-3xl md:text-4xl font-bold text-blue-600 text-center mb-4'>Experties</h2>
                   
                     <div className='flex flex-col md:flex-row justify-center gap-4 mt-6 '>
@@ -53,7 +53,7 @@ function Skills(){
                 
 </div>
         
-   </section>
+   </Section>
 
             
        )

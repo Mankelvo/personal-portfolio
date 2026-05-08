@@ -1,16 +1,18 @@
 import Kelvin from "../../assets/images/Kelvin.jpeg";
 import Button from '../ui/Button';
 import { ThumbsUp, Bug,GraduationCap } from 'lucide-react';
+import Section from "../layout/sections";
 
 
 function About(){
 
     
     return (
-        <section id="about" className="scroll-mt-20 relative z-10 overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100  min-h-screen  px-10 py-12">
+        <Section >
                      <div className="absolute right-10 top-20 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
 
-          <div className="max-w-6xl mx-auto"> 
+          <div > 
+            <h2 className='text-3xl md:text-4xl font-bold text-blue-600 text-center mb-4'>About Me</h2>
 
              <div className="flex flex-col  items-center gap-16 mb-2 p-4 ">
             
@@ -85,7 +87,7 @@ function About(){
 
         </div>  
         
-        </section>
+        </Section>
     )
 }
 
