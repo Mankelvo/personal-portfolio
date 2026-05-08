@@ -3,11 +3,11 @@ import logo from "../../assets/images/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 
+   export const NavLink = "text-sm font-medium text-gray-700 hover:text-blue-600  transition-colors duration-200 cursor-pointer";
 
 
 function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
-    const NavLink = "text-sm font-medium text-gray-700 hover:text-blue-600  transition-colors duration-200 cursor-pointer";
     const ResumeLink = " rounded-full bg-blue-600 px-5 py-2 text-sm font-medium text-white shadow-sm  hover:bg-blue-700 transition-colors  duration-200";
     const navLinks = [
   { name: 'About', href: '#about' },
