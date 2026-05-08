@@ -21,7 +21,7 @@ function Skills(){
                         key={cat}
                         onClick={()=>setActiveCategory(cat)}
                         className={`px-4 py-2  rounded-full border transition-all duration-300 ${
-                          activeCategory===cat? 'bg-purple-600 text-white border-purple-600 shadow-sm': 'text-gray-700 border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600'
+                          activeCategory===cat? 'bg-purple-600 text-white border-purple-600 shadow-sm': 'text-gray-700 font-medium border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600'
                         }`}
                         >{cat}</button>
                       ) )}
@@ -30,7 +30,7 @@ function Skills(){
 
 
 
-  <div className='grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-6 mt-10'>
+  <div className='grid grid-cols-[repeat(auto-fit,minmax(220px,260px))] justify-center gap-6 mt-10'>
   {
     skills.
     filter(skill =>activeCategory ==="All" || 
@@ -42,7 +42,7 @@ function Skills(){
     return (
       <div
       key={item.name}
-       className=' group flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-gray-100 w-full  hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-200'>
+       className=' group flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-300'>
         <Icon className=" w-5 h-5 text-blue-600 group-hover:text-purple-600 transition-colors duration-300"/>
         <span className='text-gray-800 font-medium'>{item.name}</span>
       </div>
