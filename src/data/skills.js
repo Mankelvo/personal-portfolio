@@ -5,7 +5,7 @@ import { SiTailwindcss, SiTypescript, SiJest } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
 
-const skill = [
+const skills = [
   {
     category: "Frontend",
     items: [
