@@ -8,7 +8,7 @@ function About(){
 
     
     return (
-        <Section >
+        <Section id="about">
                      <div className="absolute right-10 top-20 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
 
           <div > 
