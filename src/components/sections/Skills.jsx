@@ -1,25 +1,27 @@
 import { useState } from 'react';
 import skills from '../../data/skills.js';
-import { NavLink } from '../layout/Navbar.jsx';
 import Section from '../layout/sections.jsx';
 function Skills(){
 
-  const[activeCategory, SetactiveCategory] = useState("all");
+  const[activeCategory, setActiveCategory] = useState("All");
   const categories =["All", "Frontend", "Backend", "Tools"];
 
     return (
             <Section id="skills"  >
             
         <div className=" relative z-10">
-            <h2 className='text-3xl md:text-4xl font-bold text-blue-600 text-center mb-4'>Experties</h2>
+            <h2 className='text-3xl md:text-4xl font-bold text-blue-600 text-center mb-4'>Technical Skills</h2>
+            <p className='text-gray-500 text-center max-w-2xl mx-auto'>
+  Technologies and tools I use to build modern, scalable, and responsive applications.
+</p>
                   
                     <div className='flex flex-col md:flex-row justify-center gap-4 mt-6 '>
                      { categories.map((cat) => (
                         <button
                         key={cat}
-                        onClick={()=>SetactiveCategory(cat)}
-                        className={`px-4 py-2  rounded-full border transition ${
-                          activeCategory===cat? 'bg-purple-600 text-gray-800 shadow-sm': 'text-gray-700 hover:bg-blue-700'
+                        onClick={()=>setActiveCategory(cat)}
+                        className={`px-4 py-2  rounded-full border transition-all duration-300 ${
+                          activeCategory===cat? 'bg-purple-600 text-white border-purple-600 shadow-sm': 'text-gray-700 border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600'
                         }`}
                         >{cat}</button>
                       ) )}
@@ -40,8 +42,8 @@ function Skills(){
     return (
       <div
       key={item.name}
-       className=' flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm w-full max-w-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200'>
-        <Icon className=" w-5 h-5 text-blue-600 group-hover:text-blue-700"/>
+       className=' group flex items-center gap-3 p-4 bg-white rounded-xl shadow-sm border border-gray-100 w-full  hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] transition-all duration-200'>
+        <Icon className=" w-5 h-5 text-blue-600 group-hover:text-purple-600 transition-colors duration-300"/>
         <span className='text-gray-800 font-medium'>{item.name}</span>
       </div>
       
