@@ -1,25 +1,39 @@
-const projects =[
-  {title:"Todo App (React)",
-    description: "Built a task management app with add, edit, delete, filter, and localStorage features.",
-technologies: ["React", "Javascript", "TailWind CSS"],
-githubLink:"https://github.com/Mankelvo/my-first-repo.git",
-liveDemoLink: "https://react-tailwind-todo-app.vercel.app/"
-  },
-{title:"Personal Portfolio (React)",
-    description: "Designed and developed a responsive personal portfolio website to showcase my projects, technical skills, and contact information.",
-technologies: ["React", "Javascript", "TailWind CSS"],
-githubLink:null,
-liveDemoLink: null,
-  },
+import portfolioImg from "../assets/images/portfolio.png";
+import todoImg from "../assets/images/Todo.png";
+
+
+
+const projects = [
   {
-  title: "Shopping Cart App",
-  description: "Built a responsive e-commerce shopping cart application with product listing, category filtering, add-to-cart functionality, cart quantity updates, and persistent cart data using localStorage.",
-  technologies: ["React", "JavaScript", "CSS", "Fake Store API"],
-  githubLink: null,
-  liveDemoLink: null
-},
+    title: "Personal Portfolio",
+    description:
+      "Modern responsive portfolio website built with React and Tailwind CSS featuring reusable components, smooth interactions, and clean UI design.",
+    image: portfolioImg,
+    tech: ["React", "Tailwind CSS", "JavaScript"],
+    github: "https://github.com/Mankelvo/personal-portfolio",
+    live: "#",
+    featured: true,
+  },
 
+  {
+    title: "React Tailwind Todo App",
+    description:
+      "Responsive task management application with dynamic state handling, filtering, and localStorage persistence built using React and Tailwind CSS.",
+    image: todoImg,
+    tech: ["React", "Tailwind CSS", "JavaScript"],
+    github: "https://github.com/Mankelvo/react-tailwind-todo-app",
+    live: "https://react-tailwind-todo-app.vercel.app/",
+  },
 
+  {
+    title: "Shopping Cart App",
+    description:
+      "E-commerce shopping cart application with product filtering, quantity management, and persistent cart functionality using Fake Store API.",
+    image: "/images/cart.png",
+    tech: ["React", "JavaScript", "CSS", "Fake Store API"],
+    github: "https://github.com/Mankelvo/Cat.git",
+    live: "#",
+  },
+];
 
-]
 export default projects;

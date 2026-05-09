@@ -9,7 +9,7 @@ function About(){
     
     return (
         <Section id ="about">
-                     <div className="absolute right-10 top-20 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
+                     <div className="absolute right-10 top-10 w-72 h-72 bg-blue-300 rounded-full blur-3xl opacity-20"></div>
 
           <div > 
             <h2 className='text-3xl md:text-4xl font-bold text-blue-600 text-center mb-4'>About Me</h2>
