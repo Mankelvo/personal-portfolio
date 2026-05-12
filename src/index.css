@@ -3,3 +3,17 @@
 html {
   scroll-behavior: smooth;
 }
+
+@layer components{
+
+  .form-group{
+    @apply flex  flex-col  text-left pb-2;
+  }
+  .form-input{
+    @apply  w-full  border p-2 mt-2 rounded-md;
+  }
+
+  .form-label{
+    @apply text-sm font-semibold p-0 ml-0;
+  }
+}
