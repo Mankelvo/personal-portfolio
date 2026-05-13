@@ -8,6 +8,7 @@ import { useState } from "react";
   
 function Contact(){
 
+
     const[formData, setFormData] = useState({
         firstName:"",
         lastName:"",
@@ -15,19 +16,24 @@ function Contact(){
         message:""
     })
 
-    const handleChange = (e)=>{
-        setFormData({
-            ...formData, [e.target.name]: e.target.value
-        })
-    }
+  const[success, setSuccess]=useState("");
+
+    function handleChange(e) {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  }
+    
+    
     const handleSubmit = (e)=>{
         e.preventDefault();
     if(!formData.firstName){
-        alert("Firstname required!");
+        alert("First name required!");
         return;
     }
       if (!formData.lastName){
-        alert("Lastname required!");
+        alert("Last name required!");
         return;
      }
 
@@ -36,9 +42,13 @@ function Contact(){
         return;
      }
       if (!formData.message.trim()){
-        alert("Please write your message here!!")
+        alert("Please write your message here!!");
      }
       console.log(formData);
+      setSuccess("Message sent successfully!");
+      setTimeout(()=>{
+        setSuccess("");
+      }, 3000)
 
 
   setFormData({
@@ -50,6 +60,10 @@ function Contact(){
    
 
     }
+
+
+       
+    
     return (
         
         <Section id="contact">
@@ -90,6 +104,7 @@ function Contact(){
 
             <div className="flex md:flex-col max-w-4xl  ">
                 <form className="max-w-md mx-auto space-y-4" onSubmit={handleSubmit}>
+
                        <h3 className='text-xl md:text-2xl font-bold text-blue-600 text-center mb-4'>Contact Form</h3>
                     <div className="flex flex-col md:flex-row gap-2">
                      
@@ -114,7 +129,7 @@ function Contact(){
                         <textarea
                         className="form-input"
                         id="message"
-                        minLength={50}
+                        minLength={10}
                         name="message"
                         onChange={handleChange}
                         value={formData.message}
@@ -126,11 +141,12 @@ function Contact(){
                          <button type="submit"  className="text-sm border font-semibold px-4 py-1 mt-4 hover:bg-blue-600 hover:text-white transition-colors ">Submit</button>
 
                         </div>
+
+
                         
                     </div>
-
-
                        
+                          {success && <p className=" text-center p-3 rounded-lg bg-green-100 text-green-600 font-medium animate-in fade-in zoom-in  transition-transform duration-200">{success}</p>}
 
                 </form>
         </div>
@@ -140,5 +156,8 @@ function Contact(){
     </Section>
     )
 }
+    
+
+
 
 export default Contact;
