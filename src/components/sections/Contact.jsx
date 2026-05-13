@@ -3,9 +3,53 @@ import Section from "../layout/sections";
 
 import { Phone, Mail } from 'lucide-react';
 import Button from "../ui/Button";
+import { useState } from "react";
 
-<i data-lucide="phone"></i>  
+  
 function Contact(){
+
+    const[formData, setFormData] = useState({
+        firstName:"",
+        lastName:"",
+        email:"",
+        message:""
+    })
+
+    const handleChange = (e)=>{
+        setFormData({
+            ...formData, [e.target.name]: e.target.value
+        })
+    }
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+    if(!formData.firstName){
+        alert("Firstname required!");
+        return;
+    }
+      if (!formData.lastName){
+        alert("Lastname required!");
+        return;
+     }
+
+      if (!formData.email){
+        alert("Email required!");
+        return;
+     }
+      if (!formData.message.trim()){
+        alert("Please write your message here!!")
+     }
+      console.log(formData);
+
+
+  setFormData({
+     firstName:"",
+        lastName:"",
+        email:"",
+        message:""
+  })
+   
+
+    }
     return (
         
         <Section id="contact">
@@ -17,7 +61,7 @@ function Contact(){
 
         <h2 className=" max-w-3xl md:max-w-4xl font-bold text-blue-600 text-3xl">Get in Touch</h2>
         <p className="max-w-sm md:max-w-lg text-blue-400">I'd like to hear from you</p>
-        <p className="max-w-lg text-gray-700">If you have any inqueries of just want to say hi, 
+        <p className="max-w-lg text-gray-700">If you have any inquiries of just want to say hi, 
              please use the contact form!</p>
 
    
@@ -32,7 +76,7 @@ function Contact(){
 
                 <div className="flex items-center gap-3 " >
                  <Mail className="text-blue-800"/>
-                <a href="mail to: kelvostudy@gmail.com" className="md:text-l font-medium hover:text-blue-600 hover:underline">
+                <a href="mailto: kelvostudy@gmail.com" className="md:text-l font-medium hover:text-blue-600 hover:underline">
                  kelvostudy@gmail.com
                 </a>
         
@@ -45,38 +89,41 @@ function Contact(){
            
 
             <div className="flex md:flex-col max-w-4xl  ">
-                <form className="max-w-md mx-auto">
+                <form className="max-w-md mx-auto space-y-4" onSubmit={handleSubmit}>
                        <h3 className='text-xl md:text-2xl font-bold text-blue-600 text-center mb-4'>Contact Form</h3>
                     <div className="flex flex-col md:flex-row gap-2">
                      
                     <div className=" form-group ">
                     <label htmlFor="firstName" className="form-label">First Name</label>
-                    <input type="text" id="firstName" placeholder="First name" className="form-input"/>
+                    <input type="text" id="firstName" name="firstName" onChange={handleChange} value={formData.firstName} placeholder="First name" className="form-input"/>
                     </div>
 
                     <div className="form-group">
                     <label htmlFor="lastName" className="form-label">Last Name</label>
-                    <input type="text" id="lastName" placeholder="Last name" className="form-input" />
+                    <input type="text" id="lastName" name="lastName" onChange={handleChange} value={formData.lastName} placeholder="Last name" className="form-input" />
                     </div>
 
                     </div>
                     <div className="form-group">
                     <label htmlFor="email" className="form-label">Email</label>
-                    <input type="email" id="email" placeholder="email" className="form-input"/>
+                    <input type="email" id="email" name="email" onChange={handleChange} value={formData.email} placeholder="email" className="form-input"/>
                     </div>
 
                     <div className="form-group mb-4">
-                        <label htmlFor="message" className="form-label">Message</label>
+                        <label htmlFor="message"  className="form-label">Message</label>
                         <textarea
                         className="form-input"
-                        id="messsage"
+                        id="message"
                         minLength={50}
+                        name="message"
+                        onChange={handleChange}
+                        value={formData.message}
                     
-                        row={4}
+                        rows={4}
                         placeholder="Write your message here..."
                         />
                         <div className="flex justify-end w-full">
-                         <button type="submit" className="text-sm border font-semibold px-4 py-1 mt-4 hover:bg-blue-600 hover:text-white transition-colors ">Submit</button>
+                         <button type="submit"  className="text-sm border font-semibold px-4 py-1 mt-4 hover:bg-blue-600 hover:text-white transition-colors ">Submit</button>
 
                         </div>
                         
