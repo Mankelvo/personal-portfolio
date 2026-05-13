@@ -17,7 +17,7 @@ function Contact(){
     })
 
   const[success, setSuccess]=useState("");
-
+  const[errors, setErrors] = useState({});
     function handleChange(e) {
     setFormData({
       ...formData,
@@ -28,27 +28,47 @@ function Contact(){
     
     const handleSubmit = (e)=>{
         e.preventDefault();
-    if(!formData.firstName){
+         const newErrors = {};
+
+    if(!formData.firstName.trim()){
         alert("First name required!");
-        return;
+        newErrors.firstName=true;
+       
     }
-      if (!formData.lastName){
+      if (!formData.lastName.trim()){
         alert("Last name required!");
-        return;
+            newErrors.lastName=true;
+
+       
      }
 
-      if (!formData.email){
+      if (!formData.email.trim()){
+         newErrors.email=true;
         alert("Email required!");
-        return;
+        
+        
+
      }
       if (!formData.message.trim()){
         alert("Please write your message here!!");
+         newErrors.message=true;
+     
+       setErrors(newErrors);
+
+      
+
      }
+
+      if(Object.keys(newErrors).length > 0){
+        return;
+       }
+
       console.log(formData);
       setSuccess("Message sent successfully!");
       setTimeout(()=>{
         setSuccess("");
       }, 3000)
+
 
 
   setFormData({
@@ -58,7 +78,6 @@ function Contact(){
         message:""
   })
    
-
     }
 
 
@@ -75,7 +94,7 @@ function Contact(){
 
         <h2 className=" max-w-3xl md:max-w-4xl font-bold text-blue-600 text-3xl">Get in Touch</h2>
         <p className="max-w-sm md:max-w-lg text-blue-400">I'd like to hear from you</p>
-        <p className="max-w-lg text-gray-700">If you have any inquiries of just want to say hi, 
+        <p className="max-w-lg text-gray-700">If you have any inquiries or just want to say hi, 
              please use the contact form!</p>
 
    
@@ -110,24 +129,30 @@ function Contact(){
                      
                     <div className=" form-group ">
                     <label htmlFor="firstName" className="form-label">First Name</label>
-                    <input type="text" id="firstName" name="firstName" onChange={handleChange} value={formData.firstName} placeholder="First name" className="form-input"/>
+                    <input type="text" id="firstName" name="firstName" onChange={handleChange} value={formData.firstName} placeholder="First name" 
+                    className={`form-input ${errors.firstName? "border-red-500 focus:ring-red-200":"border-green-500 focus:ring-green-200"}`}/>
                     </div>
 
                     <div className="form-group">
                     <label htmlFor="lastName" className="form-label">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" onChange={handleChange} value={formData.lastName} placeholder="Last name" className="form-input" />
+                    <input type="text" id="lastName" name="lastName" onChange={handleChange} value={formData.lastName} placeholder="Last name" 
+                    className={ `form-input ${errors.firstName? "border-red-500 focus:ring-red-200":"border-green-500 focus:ring-green-200"}`}
+                   />
                     </div>
 
                     </div>
                     <div className="form-group">
                     <label htmlFor="email" className="form-label">Email</label>
-                    <input type="email" id="email" name="email" onChange={handleChange} value={formData.email} placeholder="email" className="form-input"/>
+                    <input type="email" id="email" name="email" onChange={handleChange} value={formData.email} placeholder="email" 
+                    className={ `form-input ${errors.firstName? "border-red-500 focus:ring-red-200":"border-green-500 focus:ring-green-200"}`}
+                  />
                     </div>
 
                     <div className="form-group mb-4">
                         <label htmlFor="message"  className="form-label">Message</label>
                         <textarea
-                        className="form-input"
+                        
+                        className={ `form-input ${errors.firstName? "border-red-500 focus:ring-red-200":"border-green-500 focus:ring-green-200"}`}
                         id="message"
                         minLength={10}
                         name="message"
