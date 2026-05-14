@@ -10,7 +10,7 @@ html {
     @apply flex  flex-col  text-left pb-2;
   }
   .form-input{
-    @apply  w-full  border p-2 mt-2 rounded-md;
+    @apply  w-full  border-2 transition-all duration-200 p-2 mt-2 rounded-md;
   }
 
   .form-label{
