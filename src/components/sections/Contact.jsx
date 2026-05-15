@@ -93,13 +93,13 @@ function Contact(){
         
         <Section id="contact">
         <h2 className='text-3xl md:text-4xl font-bold text-blue-600 text-center mb-4'>Contact Me</h2>
-              <p className="max-w-lg text-gray-700 text-center my-6 mx-auto" >I'm currently open to frontend developer opportunities and freelance projects. Feel free to reach out.</p>
+              <p className="max-w-lg text-slate-700 text-center my-6 mx-auto" >I'm currently open to frontend developer opportunities and freelance projects. Feel free to reach out.</p>
 
         <div className=" flex flex-col md:flex-row gap-10  p-4 md:text-left">
       <div className="max-w-xl flex flex-col gap-4 text-left ">
 
         <h2 className=" max-w-3xl md:max-w-4xl font-bold text-blue-600 text-3xl">Get in Touch</h2>
-        <p className="max-w-sm md:max-w-lg text-blue-500">I'd like to hear from you</p>
+        <p className="max-w-sm md:max-w-lg text-slate-600">I'd like to hear from you</p>
         <p className="max-w-lg text-gray-700">If you have any inquiries or just want to say hi, 
              please use the contact form!</p>
 
@@ -212,7 +212,7 @@ function Contact(){
   </p>
 )}
                         <div className="flex justify-end w-full">
-                         <button type="submit"  className="text-sm border font-semibold px-4 py-1 mt-4 hover:bg-blue-600 hover:text-white transition-colors ">Submit</button>
+                         <button type="submit"  className=" bg-blue-600 text-sm rounded-md font-semibold px-5 py-2 mt-4 hover:bg-blue-700 text-white transition-colors duration-300">Submit</button>
 
                         </div>
 
