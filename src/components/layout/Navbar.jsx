@@ -3,12 +3,12 @@ import logo from "../../assets/images/logo.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross1 } from "react-icons/rx";
 
-   export const NavLink = "text-sm font-medium text-gray-700 hover:text-blue-600  transition-colors duration-200 cursor-pointer";
+   export const NavLink = "text-sm font-medium text-slate-700 hover:text-blue-600  transition-colors duration-200 cursor-pointer";
 
 
 function Navbar(){
     const [isOpen, setIsOpen] = useState(false);
-    const ResumeLink = " rounded-full bg-blue-600 px-5 py-2 text-sm font-medium text-white shadow-sm  hover:bg-blue-700 transition-colors  duration-200";
+    const ResumeLink = " rounded-full bg-blue-600 px-5 py-2 text-sm shadow-sm font-medium text-white shadow-sm  hover:bg-blue-700 transition-colors  duration-200";
     const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
@@ -16,13 +16,13 @@ function Navbar(){
   { name: 'Contact', href: '#contact' },
 ];
     return(
-        <nav className=" sticky relative top-0  items-center bg-white/70 backdrop-blur-md w-full mx-auto z-50 border border-white/20 ">
+        <nav className="sticky top-0  relative items-center bg-white/80 backdrop-blur-md  w-full mx-auto z-50 border-b border-white/20 ">
            
             <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
                 <div className ="flex items-center gap-2">
                <img src={logo} alt="Kelvin Logo" className="w-8 h-8"/>
        
-            <a  className="hover:text-blue-600 transition text-xl md:text-xl font-semibold text-gray-900 "href="#">Kelvin </a> 
+            <a  className="hover:text-blue-600 transition text-xl font-semibold text-slate-900 "href="#">Kelvin </a> 
      
 </div>
          
@@ -35,7 +35,7 @@ function Navbar(){
             </ul>
 
             <button
-            className="md:hidden text-2xl text-gray-800 hover:text-blue-600"
+            className="md:hidden text-2xl text-slate-800 hover:text-blue-600"
             onClick={()=>setIsOpen(!isOpen)}
             aria-label="Toggle navigation menu"
                 aria-expanded={isOpen}
@@ -53,7 +53,7 @@ function Navbar(){
             </div>
 
          
-       <ul id="mobile-menu" className={` absolute top-full left-0 w-full flex flex-col items-center gap-8 py-4 md:hidden bg-white/90 border-t backdrop-blur-md z-50 shadow-md  border-gray-200 will-change-transform transform transition-all duration-300 ease-in-out origin-top ${
+       <ul id="mobile-menu" className={` absolute top-full left-0 w-full flex flex-col items-center gap-8 py-4 md:hidden bg-white/90 border-t backdrop-blur-md z-50 shadow-md  border-slate-200 will-change-transform transform transition-all duration-300 ease-in-out origin-top ${
        isOpen ? "scale-y-100 translate-y-0 opacity-100 pointer-events-auto" : "scale-y-0 translate-y-2 opacity-0  pointer-events-none"}`}>
 
         {
