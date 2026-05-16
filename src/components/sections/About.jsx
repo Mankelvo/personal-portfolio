@@ -21,9 +21,9 @@ function About(){
                 <div className="flex flex-col gap-4   max-w-xl " >
                   
                 
-        <h1 className="text-4xl md:text-6xl text-gray-800 font-bold leading-tight mb-4">Hi, I'm Kelvin</h1>
+        <h1 className="text-4xl md:text-6xl text-slate-900 font-bold leading-tight mb-4">Hi, I'm Kelvin</h1>
         <h2 className="text-xl md:text-2xl  text-blue-600 font-semibold mb-2">React Frontend Developer</h2>
-        <p className="max-w-lg text-gray-700">I build clean, responsive, and user-friendly web applications
+        <p className="max-w-lg text-slate-700">I build clean, responsive, and user-friendly web applications
             using React and modern frontend technologies.
     
     </p>
@@ -36,7 +36,7 @@ function About(){
   href="/Resume.pdf" 
   target="_blank" 
   rel="noreferrer"
-  className="px-4 py-2 text-blue-600 hover:underline transition"
+  className="px-4 py-2 text-blue-600 hover:underline transition "
 >
   Open Resume
 </a>
@@ -64,7 +64,7 @@ function About(){
                 <ThumbsUp className="h-7 w-7 text-blue-600 shrink-0"/>
                 <strong className="block text-blue-800 text-lg font-semibold">Focused</strong>
              
-                <p className="text-gray-600  max-w-xs">Detail-oriented and committed to quality</p>
+                <p className="text-slate-600  max-w-xs">Detail-oriented and committed to quality</p>
 
             </div>
              <div className="flex flex-col items-center text-center gap-2 p-4 ">
@@ -72,13 +72,13 @@ function About(){
 
                 <strong className="block text-lg text-blue-800 font-semibold">Problem Solver</strong>
              
-                <p className="text-gray-600  max-w-xs">I love solving challenges and finding efficient solutions</p>
+                <p className="text-slate-600  max-w-xs">I love solving challenges and finding efficient solutions</p>
 
             </div>
              <div className="flex flex-col items-center text-center  gap-2 p-4 ">
                <GraduationCap className="h-7 w-7 text-blue-600 shrink-0"/>
                 <strong className="block text-lg text-blue-800 font-semibold">Always Learning</strong>
-                <p className="text-gray-600  max-w-xs">Continuously improving and exploring new technologies</p>
+                <p className="text-slate-600  max-w-xs">Continuously improving and exploring new technologies</p>
 
             </div>
         </div>
