@@ -4,7 +4,7 @@ A modern and responsive personal portfolio website built with React, Vite, and T
 
 ## Live Demo
 
-https://personal-portfolio-taupe-chi-57.vercel.app/
+[View Portfolio](https://personal-portfolio-taupe-chi-57.vercel.app/)
 
 ## Features
 
