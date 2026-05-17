@@ -13,7 +13,7 @@ function Navbar(){
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'Contact', href: '#contact' }
 ];
     return(
         <nav className="sticky top-0  relative items-center bg-white/80 backdrop-blur-md  w-full mx-auto z-50 border-b border-white/20 ">
